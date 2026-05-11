@@ -3,17 +3,10 @@
    Disciplina: Fundamentos da Programação Web - UNINTER
    RU: 5469817
    Arquivo: css/style.css
-   Descrição: Estilos globais, sistema de temas (claro/escuro),
-              componentes e responsividade
 ================================================================ */
 
-/* ----------------------------------------------------------------
-   1. VARIÁVEIS CSS (Custom Properties)
-   Centralizam cores, tipografia e efeitos para fácil manutenção
-   e para suportar a alternância de tema via JavaScript
----------------------------------------------------------------- */
 :root {
-  /* Paleta de cores - tema claro (padrão) */
+  /* Paleta de cores */
   --color-primary:   #0f2d5c;   /* Azul marinho profundo - identidade */
   --color-secondary: #1a56db;   /* Azul corporativo - links e destaques */
   --color-accent:    #f0a500;   /* Âmbar/dourado - hover e detalhes */
@@ -42,30 +35,11 @@
   --radius-sm:       8px;
   --transition:      0.3s ease;
 
-  /* Fontes importadas do Google Fonts (carregadas no HTML) */
+  /* Fontes importadas do Google Fonts */
   --font-heading: 'Raleway', sans-serif;
   --font-body:    'Nunito Sans', sans-serif;
 }
 
-/* ----------------------------------------------------------------
-   Variáveis sobrepostas para o TEMA ESCURO
-   Ativadas quando o <html> recebe data-theme="dark" via JavaScript
----------------------------------------------------------------- */
-[data-theme="dark"] {
-  --color-bg:      #0a1628;
-  --color-surface: #0f2040;
-  --color-card-bg: #162040;
-  --color-text:    #e2e8f0;
-  --color-muted:   #94a3b8;
-  --color-border:  #1e3a5f;
-  --shadow-md:     0 4px 20px rgba(0, 0, 0, 0.3);
-  --shadow-lg:     0 10px 40px rgba(0, 0, 0, 0.4);
-}
-
-/* ----------------------------------------------------------------
-   2. RESET E ESTILOS BASE
-   Normaliza o comportamento padrão dos navegadores
----------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -82,7 +56,6 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.7;
-  /* Transição suave ao trocar de tema */
   transition: background-color var(--transition), color var(--transition);
 }
 
@@ -96,9 +69,7 @@ a {
 }
 a:hover { color: var(--color-accent); }
 
-/* ----------------------------------------------------------------
-   3. UTILITÁRIOS GLOBAIS
----------------------------------------------------------------- */
+/* UTILITÁRIOS GLOBAIS */
 
 /* Limita a largura máxima e centraliza o conteúdo */
 .container {
@@ -110,7 +81,7 @@ a:hover { color: var(--color-accent); }
 /* Espaçamento padrão das seções */
 .section { padding: 5rem 0; }
 
-/* Título de seção com sublinhado decorativo */
+/* Título de seção */
 .section-title {
   font-family: var(--font-heading);
   font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -119,7 +90,6 @@ a:hover { color: var(--color-accent); }
   margin-bottom: 0.5rem;
   display: inline-block;
 }
-[data-theme="dark"] .section-title { color: var(--color-secondary); }
 
 /* Barra decorativa abaixo do título */
 .section-title::after {
@@ -138,9 +108,7 @@ a:hover { color: var(--color-accent); }
   font-size: 1.05rem;
 }
 
-/* ----------------------------------------------------------------
-   4. BOTÕES
----------------------------------------------------------------- */
+/* BOTÕES */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.75rem;
@@ -154,7 +122,7 @@ a:hover { color: var(--color-accent); }
   letter-spacing: 0.02em;
 }
 
-/* Botão primário (sólido azul) */
+/* Botão primário */
 .btn-primary {
   background: var(--color-secondary);
   color: #fff;
@@ -168,7 +136,7 @@ a:hover { color: var(--color-accent); }
   box-shadow: var(--shadow-md);
 }
 
-/* Botão secundário (contorno) */
+/* Botão secundário*/
 .btn-outline {
   background: transparent;
   color: var(--color-secondary);
@@ -180,10 +148,6 @@ a:hover { color: var(--color-accent); }
   transform: translateY(-2px);
 }
 
-/* ----------------------------------------------------------------
-   5. NAVBAR (barra de navegação fixa no topo)
-   Idêntica em todas as páginas - JavaScript gerencia o menu mobile
----------------------------------------------------------------- */
 .navbar {
   position: fixed;
   top: 0;
@@ -195,7 +159,7 @@ a:hover { color: var(--color-accent); }
   transition: box-shadow var(--transition);
 }
 
-/* Sombra mais intensa quando a página é rolada (via JavaScript) */
+/* Sombra mais intensa quando a página é rolada */
 .navbar.scrolled { box-shadow: var(--shadow-lg); }
 
 .nav-container {
@@ -209,7 +173,7 @@ a:hover { color: var(--color-accent); }
   gap: 2rem;
 }
 
-/* Logo / monograma */
+/* Logo */
 .nav-logo {
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -250,9 +214,6 @@ a:hover { color: var(--color-accent); }
   flex-shrink: 0;
 }
 
-/* Botão de tema removido a pedido */
-
-/* Botão hamburger - visível apenas em mobile */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -268,7 +229,6 @@ a:hover { color: var(--color-accent); }
   transition: background var(--transition);
 }
 
-/* As três linhas do hamburger */
 .hamburger span {
   display: block;
   height: 2px;
@@ -277,15 +237,11 @@ a:hover { color: var(--color-accent); }
   transition: all var(--transition);
 }
 
-/* Animação: hamburger vira "X" quando o menu está aberto */
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ----------------------------------------------------------------
-   6. BARRA DE PROGRESSO DE SCROLL
-   Atualizada dinamicamente pelo JavaScript conforme o usuário rola
----------------------------------------------------------------- */
+/* BARRA DE PROGRESSO DE SCROLL */
 .scroll-progress {
   position: fixed;
   top: 68px;          /* Fica logo abaixo do navbar */
@@ -297,9 +253,6 @@ a:hover { color: var(--color-accent); }
   transition: width 0.1s linear;
 }
 
-/* ----------------------------------------------------------------
-   7. SEÇÃO HERO (Sobre mim - index.html)
----------------------------------------------------------------- */
 .hero {
   padding: 8rem 0 5rem;
   background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg) 100%);
@@ -320,7 +273,6 @@ a:hover { color: var(--color-accent); }
   pointer-events: none;
 }
 
-/* Layout da hero: foto + texto lado a lado */
 .hero-content {
   display: flex;
   align-items: center;
@@ -343,7 +295,6 @@ a:hover { color: var(--color-accent); }
   box-shadow: var(--shadow-lg);
 }
 
-/* Anel decorativo removido a pedido */
 
 /* Texto introdutório acima do nome */
 .hero-eyebrow {
@@ -366,14 +317,12 @@ a:hover { color: var(--color-accent); }
 }
 [data-theme="dark"] .hero-name { color: var(--color-text); }
 
-/* Tagline estática — sem cursor animado */
 .hero-tagline {
   font-size: 1.1rem;
   color: var(--color-muted);
   margin-bottom: 1.25rem;
 }
 
-/* Badges de apresentação rápida */
 .hero-badges {
   display: flex;
   flex-wrap: wrap;
@@ -398,16 +347,14 @@ a:hover { color: var(--color-accent); }
   transform: translateY(-2px);
 }
 
-/* Botões de ação do hero */
+/* Botões de ação */
 .hero-actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-/* ----------------------------------------------------------------
-   8. CARDS GENÉRICOS
----------------------------------------------------------------- */
+/* CARDS */
 .card {
   background: var(--color-card-bg);
   border: 1px solid var(--color-border);
@@ -447,15 +394,12 @@ a:hover { color: var(--color-accent); }
 }
 .hobbies-list li { font-size: 0.95rem; }
 
-/* ----------------------------------------------------------------
-   9. TIMELINE DE FORMAÇÃO (formacao.html)
----------------------------------------------------------------- */
+/* TIMELINE DE FORMAÇÃO */
 .timeline {
   position: relative;
   padding-left: 0;
 }
 
-/* Linha vertical da timeline */
 .timeline::before {
   content: '';
   position: absolute;
@@ -473,7 +417,6 @@ a:hover { color: var(--color-accent); }
   position: relative;
 }
 
-/* Ícone circular na timeline */
 .timeline-dot {
   flex-shrink: 0;
   width: 42px;
@@ -538,7 +481,6 @@ a:hover { color: var(--color-accent); }
   line-height: 1.65;
 }
 
-/* Tags de status (concluído / em andamento) */
 .tag {
   display: inline-block;
   font-size: 0.72rem;
@@ -596,9 +538,7 @@ a:hover { color: var(--color-accent); }
 
 .language-level { font-size: 0.85rem; color: var(--color-muted); }
 
-/* ----------------------------------------------------------------
-   10. CARDS DE PORTFÓLIO (portfolio.html)
----------------------------------------------------------------- */
+/* CARDS DE PORTFÓLIO */
 .portfolio-intro {
   max-width: 700px;
   color: var(--color-muted);
@@ -679,9 +619,7 @@ a:hover { color: var(--color-accent); }
   border-radius: 4px;
 }
 
-/* ----------------------------------------------------------------
-   11. FORMULÁRIO DE CONTATO (contato.html)
----------------------------------------------------------------- */
+/* FORMULÁRIO DE CONTATO */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.6fr;
@@ -737,7 +675,7 @@ a:hover { color: var(--color-accent); }
   box-shadow: var(--shadow-sm);
 }
 
-/* Grupo de campo (label + input) */
+/* Grupo de campo */
 .form-group { margin-bottom: 1.25rem; }
 
 .form-group label {
@@ -749,7 +687,7 @@ a:hover { color: var(--color-accent); }
   letter-spacing: 0.02em;
 }
 
-/* Campo de entrada genérico */
+/* Campo de entrada */
 .form-control {
   width: 100%;
   padding: 0.75rem 1rem;
@@ -767,7 +705,7 @@ a:hover { color: var(--color-accent); }
   box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.12);
 }
 
-/* Estado de erro no campo (ativado pelo JavaScript) */
+/* Estado de erro no campo*/
 .form-control.error { border-color: #ef4444; }
 
 textarea.form-control {
@@ -777,19 +715,17 @@ textarea.form-control {
 
 /* Mensagem de erro abaixo do campo */
 .error-msg {
-  display: none;         /* Oculto por padrão */
+  display: none;         
   font-size: 0.8rem;
   color: #ef4444;
   margin-top: 0.35rem;
   font-weight: 600;
 }
-.error-msg.visible { display: block; } /* Exibido pelo JavaScript */
+.error-msg.visible { display: block; }
 
-/* ----------------------------------------------------------------
-   12. MODAL DE SUCESSO DO FORMULÁRIO (controlado pelo JavaScript)
----------------------------------------------------------------- */
+/* SUCESSO DO FORMULÁRIO */
 .modal-overlay {
-  display: none;             /* Oculto por padrão */
+  display: none;             
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
@@ -798,7 +734,7 @@ textarea.form-control {
   justify-content: center;
   backdrop-filter: blur(4px);
 }
-.modal-overlay.open { display: flex; } /* Exibido pelo JavaScript */
+.modal-overlay.open { display: flex; }
 
 .modal-box {
   background: var(--color-card-bg);
@@ -811,7 +747,6 @@ textarea.form-control {
   animation: modalIn 0.3s ease;
 }
 
-/* Animação de entrada do modal */
 @keyframes modalIn {
   from { opacity: 0; transform: scale(0.88) translateY(-20px); }
   to   { opacity: 1; transform: scale(1)    translateY(0); }
@@ -830,9 +765,7 @@ textarea.form-control {
 
 .modal-text { color: var(--color-muted); margin-bottom: 1.75rem; }
 
-/* ----------------------------------------------------------------
-   13. RODAPÉ
----------------------------------------------------------------- */
+/* RODAPÉ */
 .footer {
   background: var(--color-primary);
   color: rgba(255, 255, 255, 0.75);
@@ -857,11 +790,7 @@ textarea.form-control {
 }
 .footer-links a:hover { color: var(--color-accent); }
 
-/* ----------------------------------------------------------------
-   14. ANIMAÇÕES DE ENTRADA POR SCROLL (IntersectionObserver)
-   O JavaScript adiciona a classe 'visible' quando o elemento
-   aparece na tela, ativando a transição abaixo
----------------------------------------------------------------- */
+/* ANIMAÇÕES DE ENTRADA */
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
@@ -872,18 +801,14 @@ textarea.form-control {
   transform: translateY(0);
 }
 
-/* Atraso escalonado para animações em sequência */
 .fade-in:nth-child(1) { transition-delay: 0.05s; }
 .fade-in:nth-child(2) { transition-delay: 0.15s; }
 .fade-in:nth-child(3) { transition-delay: 0.25s; }
 .fade-in:nth-child(4) { transition-delay: 0.35s; }
 
-/* ----------------------------------------------------------------
-   15. RESPONSIVIDADE
-   Ajustes para tablets e celulares
----------------------------------------------------------------- */
+/* RESPONSIVIDADE */
 
-/* Tablet e abaixo */
+/* Tablet */
 @media (max-width: 900px) {
   .contact-grid { grid-template-columns: 1fr; }
 }
@@ -906,12 +831,11 @@ textarea.form-control {
     gap: 0.25rem;
     box-shadow: var(--shadow-md);
   }
-  /* Exibido via JavaScript quando hamburger é clicado */
+
   .nav-menu.open { display: flex; }
 
   .nav-link { padding: 0.75rem 1rem; width: 100%; }
 
-  /* Hero em coluna única */
   .hero-content {
     flex-direction: column;
     text-align: center;
@@ -921,7 +845,6 @@ textarea.form-control {
   .hero-photo   { width: 170px; height: 170px; }
 }
 
-/* Celulares pequenos */
 @media (max-width: 480px) {
   .section       { padding: 3rem 0; }
   .hero          { padding: 6rem 0 3rem; }

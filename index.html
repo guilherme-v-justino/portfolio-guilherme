@@ -14,25 +14,19 @@
   <meta name="description" content="Portfólio de Guilherme Vicente Justino — Médico Veterinário, Cientista de Dados e Empreendedor em Curitiba, PR." />
   <title>Guilherme Vicente Justino | Sobre mim</title>
 
-  <!-- Google Fonts: Raleway (títulos) + Nunito Sans (corpo) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
-  <!-- Folha de estilos principal (CSS puro, sem frameworks) -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ==============================================================
-    CABEÇALHO / NAVBAR FIXA
-    Idêntica em todas as páginas. O link "Sobre mim" recebe
-    a classe "active" pois esta é a página atual.
-  ============================================================== -->
+  <!-- CABEÇALHO -->
   <header class="navbar" id="navbar" role="banner">
     <div class="nav-container">
 
-      <!-- Logo / monograma clicável -->
+      <!-- Logo  -->
       <a href="index.html" class="nav-logo" aria-label="Página inicial">GVJ</a>
 
       <!-- Menu principal de navegação entre páginas -->
@@ -44,8 +38,6 @@
       </ul>
 
       <div class="nav-actions">
-        <!-- Botão hambúrguer: visível apenas em mobile (CSS) -->
-        <!-- O JavaScript controla a abertura/fechamento do menu -->
         <button class="hamburger" id="hamburger"
                 aria-label="Abrir menu de navegação"
                 aria-expanded="false"
@@ -59,12 +51,8 @@
     </div>
   </header>
 
-  <!-- Barra de progresso de leitura (atualizada pelo JavaScript) -->
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- ==============================================================
-    SEÇÃO HERO — Apresentação principal com foto e tagline animada
-  ============================================================== -->
   <section class="hero" aria-label="Apresentação pessoal">
     <div class="container">
       <div class="hero-content fade-in">
@@ -86,10 +74,9 @@
 
           <h1 class="hero-name">Guilherme Vicente Justino</h1>
 
-          <!-- Tagline estática -->
+          <!-- Tagline -->
           <p class="hero-tagline">Médico Veterinário · Cientista de Dados · Empreendedor</p>
 
-          <!-- Badges de apresentação rápida -->
           <div class="hero-badges" aria-label="Áreas de atuação">
             <span class="badge">🐾 Médico Veterinário</span>
             <span class="badge">📊 Ciência de Dados</span>
@@ -101,9 +88,7 @@
     </div>
   </section>
 
-  <!-- ==============================================================
-    SEÇÃO SOBRE MIM — Apresentação detalhada em cards
-  ============================================================== -->
+  <!-- SEÇÃO SOBRE MIM  -->
   <main>
     <section class="section" id="sobre" aria-labelledby="titulo-sobre">
       <div class="container">
@@ -157,9 +142,7 @@
     </section>
   </main>
 
-  <!-- ==============================================================
-    RODAPÉ — Presente em todas as páginas
-  ============================================================== -->
+  <!-- RODAPÉ -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <!-- Ano atualizado automaticamente pelo JavaScript -->
@@ -177,7 +160,6 @@
     </div>
   </footer>
 
-  <!-- Script principal (JavaScript puro, sem frameworks) -->
   <script src="js/script.js"></script>
 
 </body>

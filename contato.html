@@ -14,7 +14,7 @@
   <meta name="description" content="Entre em contato com Guilherme Vicente Justino — formulário de contato com validação em JavaScript." />
   <title>Guilherme Vicente Justino | Contato</title>
 
-  <!-- Google Fonts: Raleway (títulos) + Nunito Sans (corpo) -->
+  <!-- Encontrei fontes pelo Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
@@ -23,9 +23,6 @@
 </head>
 <body>
 
-  <!-- ==============================================================
-    NAVBAR — O link "Contato" recebe a classe "active"
-  ============================================================== -->
   <header class="navbar" id="navbar" role="banner">
     <div class="nav-container">
 
@@ -200,12 +197,7 @@
 
   </main>
 
-  <!-- ==============================================================
-    MODAL DE CONFIRMAÇÃO DE ENVIO
-    Exibido pelo JavaScript após validação e "envio" bem-sucedido.
-    Inicialmente oculto via CSS (display: none no .modal-overlay).
-    O JavaScript adiciona a classe "open" para exibi-lo.
-  ============================================================== -->
+  <!-- CONFIRMAÇÃO DE ENVIO -->
   <div class="modal-overlay" id="modalSuccess"
        role="dialog"
        aria-modal="true"
@@ -223,7 +215,7 @@
         Retornarei assim que possível.
       </p>
 
-      <!-- Botão para fechar o modal -->
+      <!-- Botão para fechar -->
       <button class="btn btn-primary"
               id="modalClose"
               aria-label="Fechar janela de confirmação">
@@ -233,9 +225,7 @@
 
   </div>
 
-  <!-- ==============================================================
-    RODAPÉ
-  ============================================================== -->
+  <!-- RODAPÉ -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <p>© <span id="anoAtual"></span> Guilherme Vicente Justino · Curitiba, PR</p>
