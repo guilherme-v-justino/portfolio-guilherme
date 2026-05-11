@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<!--
+  ================================================================
+  PORTFÓLIO PESSOAL - Guilherme Vicente Justino
+  Disciplina: Fundamentos da Programação Web - UNINTER
+  RU: 5469817
+  Arquivo: contato.html (Formulário de contato com validação JS)
+  ================================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entre em contato com Guilherme Vicente Justino — formulário de contato com validação em JavaScript." />
+  <title>Guilherme Vicente Justino | Contato</title>
+
+  <!-- Google Fonts: Raleway (títulos) + Nunito Sans (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==============================================================
+    NAVBAR — O link "Contato" recebe a classe "active"
+  ============================================================== -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+
+      <a href="index.html" class="nav-logo" aria-label="Página inicial">GVJ</a>
+
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="index.html"     class="nav-link">Sobre mim</a></li>
+        <li><a href="formacao.html"  class="nav-link">Formação</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfólio</a></li>
+        <li><a href="contato.html"   class="nav-link active">Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="hamburger" id="hamburger"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ==============================================================
+    CONTEÚDO PRINCIPAL
+  ============================================================== -->
+  <main style="padding-top: 68px;">
+
+    <section class="section" aria-labelledby="titulo-contato">
+      <div class="container">
+
+        <h2 class="section-title fade-in" id="titulo-contato">Contato</h2>
+        <p class="section-subtitle fade-in">
+          Vamos conversar? Estou disponível para oportunidades e colaborações.
+        </p>
+
+        <!-- Layout de duas colunas: info à esquerda, formulário à direita -->
+        <div class="contact-grid fade-in">
+
+          <!-- ── Coluna esquerda: informações e links rápidos ── -->
+          <aside class="contact-info" aria-label="Informações de contato">
+            <h3>Informações</h3>
+            <p>
+              Seja para discutir uma oportunidade profissional, uma parceria ou
+              apenas trocar ideias sobre tecnologia e ciência de dados, fique
+              à vontade para entrar em contato. Responderei o mais breve possível.
+            </p>
+
+            <!-- Links diretos de contato -->
+            <div class="contact-links" role="list">
+
+              <a href="mailto:gvicentejustino@gmail.com"
+                 class="contact-link-item"
+                 role="listitem"
+                 aria-label="Enviar e-mail para gvicentejustino@gmail.com">
+                <span class="link-icon" aria-hidden="true">✉</span>
+                gvicentejustino@gmail.com
+              </a>
+
+              <a href="https://github.com/guilherme-v-justino"
+                 class="contact-link-item"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 role="listitem"
+                 aria-label="Acessar perfil no GitHub (abre em nova aba)">
+                <span class="link-icon" aria-hidden="true">🐙</span>
+                github.com/guilherme-v-justino
+              </a>
+
+              <a href="https://www.linkedin.com/in/guilherme-vicente-justino-6b0780124"
+                 class="contact-link-item"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 role="listitem"
+                 aria-label="Acessar perfil no LinkedIn (abre em nova aba)">
+                <span class="link-icon" aria-hidden="true">💼</span>
+                LinkedIn — Guilherme V. Justino
+              </a>
+
+              <a href="https://maps.google.com/?q=Curitiba,PR"
+                 class="contact-link-item"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 role="listitem"
+                 aria-label="Localização: Curitiba, Paraná">
+                <span class="link-icon" aria-hidden="true">📍</span>
+                Curitiba, Paraná — Brasil
+              </a>
+
+            </div>
+          </aside>
+
+          <!-- ── Coluna direita: formulário de contato ─────── -->
+          <!--
+            IMPORTANTE: Todo o comportamento do formulário (validação,
+            envio simulado e modal de confirmação) é controlado
+            pelo JavaScript em js/script.js — sem backend real.
+          -->
+          <div class="contact-form" role="region" aria-label="Formulário de contato">
+            <form id="contactForm" novalidate aria-label="Enviar mensagem">
+
+              <!-- Campo: Nome completo -->
+              <div class="form-group">
+                <label for="nome">Nome completo *</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  class="form-control"
+                  placeholder="Seu nome completo"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  aria-describedby="nomeError"
+                />
+                <!-- Mensagem de erro: exibida/ocultada pelo JavaScript -->
+                <span class="error-msg" id="nomeError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Campo: E-mail -->
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="seu@email.com"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  aria-describedby="emailError"
+                />
+                <!-- Mensagem de erro: validação de formato feita pelo JavaScript -->
+                <span class="error-msg" id="emailError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Campo: Mensagem -->
+              <div class="form-group">
+                <label for="mensagem">Mensagem *</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  class="form-control"
+                  placeholder="Escreva sua mensagem aqui..."
+                  rows="5"
+                  required
+                  aria-required="true"
+                  aria-describedby="mensagemError"
+                ></textarea>
+                <!-- Mensagem de erro: exibida/ocultada pelo JavaScript -->
+                <span class="error-msg" id="mensagemError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Botão de envio -->
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Enviar mensagem ✉
+              </button>
+
+            </form>
+          </div><!-- /contact-form -->
+
+        </div><!-- /contact-grid -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================================
+    MODAL DE CONFIRMAÇÃO DE ENVIO
+    Exibido pelo JavaScript após validação e "envio" bem-sucedido.
+    Inicialmente oculto via CSS (display: none no .modal-overlay).
+    O JavaScript adiciona a classe "open" para exibi-lo.
+  ============================================================== -->
+  <div class="modal-overlay" id="modalSuccess"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="modalTitle"
+       aria-describedby="modalText">
+
+    <div class="modal-box">
+      <!-- Ícone de sucesso -->
+      <div class="modal-icon" aria-hidden="true">✅</div>
+
+      <h3 class="modal-title" id="modalTitle">Mensagem enviada!</h3>
+
+      <p class="modal-text" id="modalText">
+        Obrigado pelo contato, <strong>sua mensagem foi recebida com sucesso!</strong><br>
+        Retornarei assim que possível.
+      </p>
+
+      <!-- Botão para fechar o modal -->
+      <button class="btn btn-primary"
+              id="modalClose"
+              aria-label="Fechar janela de confirmação">
+        Fechar
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ==============================================================
+    RODAPÉ
+  ============================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="anoAtual"></span> Guilherme Vicente Justino · Curitiba, PR</p>
+      <nav class="footer-links" aria-label="Links de contato">
+        <a href="mailto:gvicentejustino@gmail.com"
+           aria-label="Enviar e-mail">✉ gvicentejustino@gmail.com</a>
+        <a href="https://github.com/guilherme-v-justino"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Perfil no GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/guilherme-vicente-justino-6b0780124"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Perfil no LinkedIn">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

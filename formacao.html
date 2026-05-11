@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<!--
+  ================================================================
+  PORTFÓLIO PESSOAL - Guilherme Vicente Justino
+  Disciplina: Fundamentos da Programação Web - UNINTER
+  RU: 5469817
+  Arquivo: formacao.html (Formação acadêmica e cursos)
+  ================================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Formação acadêmica e cursos de Guilherme Vicente Justino — Medicina Veterinária (UFPR) e Ciência de Dados (UNINTER)." />
+  <title>Guilherme Vicente Justino | Formação</title>
+
+  <!-- Google Fonts: Raleway (títulos) + Nunito Sans (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==============================================================
+    NAVBAR — O link "Formação" recebe a classe "active"
+  ============================================================== -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+
+      <a href="index.html" class="nav-logo" aria-label="Página inicial">GVJ</a>
+
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="index.html"     class="nav-link">Sobre mim</a></li>
+        <li><a href="formacao.html"  class="nav-link active">Formação</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfólio</a></li>
+        <li><a href="contato.html"   class="nav-link">Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="hamburger" id="hamburger"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ==============================================================
+    CONTEÚDO PRINCIPAL
+  ============================================================== -->
+  <main style="padding-top: 68px;">
+
+    <!-- ── Formação Acadêmica ─────────────────────────────────── -->
+    <section class="section" aria-labelledby="titulo-academico">
+      <div class="container">
+
+        <h2 class="section-title fade-in" id="titulo-academico">Formação Acadêmica</h2>
+        <p class="section-subtitle fade-in">
+          Minha trajetória educacional, unindo ciências da saúde e tecnologia
+        </p>
+
+        <!-- Timeline vertical de formação -->
+        <div class="timeline" role="list">
+
+          <!-- Item 1: Ciência de Dados (mais recente) -->
+          <div class="timeline-item fade-in" role="listitem">
+            <!-- Ícone decorativo do ponto na timeline -->
+            <div class="timeline-dot" aria-hidden="true">📊</div>
+            <div class="timeline-content">
+              <p class="timeline-period">2024 – Presente</p>
+              <h3 class="timeline-title">
+                Tecnólogo em Ciência de Dados
+                <span class="tag tag-progress">Em andamento</span>
+              </h3>
+              <p class="timeline-institution">UNINTER — Centro Universitário Internacional</p>
+              <p class="timeline-description">
+                Graduação tecnológica com foco em análise e ciência de dados, abrangendo
+                estatística, programação em Python, machine learning, visualização de dados
+                e banco de dados. A formação complementa minha experiência prática em
+                negócios com ferramentas modernas de tomada de decisão baseada em dados.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: Medicina Veterinária -->
+          <div class="timeline-item fade-in" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">🐾</div>
+            <div class="timeline-content">
+              <p class="timeline-period">Concluído</p>
+              <h3 class="timeline-title">
+                Medicina Veterinária
+                <span class="tag tag-done">Concluído</span>
+              </h3>
+              <p class="timeline-institution">UFPR — Universidade Federal do Paraná</p>
+              <p class="timeline-description">
+                Formação completa em Medicina Veterinária com ênfase em clínica de pequenos
+                animais e reabilitação. Durante a graduação, desenvolvi sólida base científica,
+                capacidade analítica e habilidade de trabalho em ambientes de alta pressão —
+                competências que hoje aplico tanto na gestão da Impulso Fisioterapia
+                Veterinária quanto nos estudos em Ciência de Dados.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Cursos e Capacitações ──────────────────────────────── -->
+    <section class="section" style="padding-top: 0;" aria-labelledby="titulo-cursos">
+      <div class="container">
+
+        <h2 class="section-title fade-in" id="titulo-cursos">Cursos & Capacitações</h2>
+        <p class="section-subtitle fade-in">
+          Aprendizado contínuo em tecnologia, dados e programação
+        </p>
+
+        <!-- Grade de cards de cursos -->
+        <div class="courses-grid">
+
+          <!-- Curso 1: Udemy - Análise e Ciência de Dados -->
+          <article class="card fade-in" aria-label="Curso de Análise e Ciência de Dados">
+            <div class="card-icon" aria-hidden="true">🎓</div>
+            <h3>Formação Plena em Análise e Ciência de Dados</h3>
+            <p style="color: var(--color-secondary); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem;">
+              Udemy <span class="tag tag-progress">Em andamento</span>
+            </p>
+            <p style="color: var(--color-muted); font-size: 0.95rem;">
+              Curso abrangente cobrindo fundamentos de análise de dados, estatística aplicada,
+              Python para dados, visualização e introdução a machine learning.
+            </p>
+          </article>
+
+          <!-- Curso 2: Python - Gustavo Guanabara -->
+          <article class="card fade-in" aria-label="Curso de Python do Gustavo Guanabara">
+            <div class="card-icon" aria-hidden="true">🐍</div>
+            <h3>Python para Todos</h3>
+            <p style="color: var(--color-secondary); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem;">
+              Curso em Vídeo — Gustavo Guanabara <span class="tag tag-done">Concluído</span>
+            </p>
+            <p style="color: var(--color-muted); font-size: 0.95rem;">
+              Curso introdutório à linguagem Python com foco em lógica de programação,
+              estruturas de dados, funções e orientação a objetos.
+              Ministrado por Gustavo Guanabara, referência no ensino de programação no Brasil.
+            </p>
+          </article>
+
+          <!-- Curso 3: Medicina Veterinária (área de especialidade) -->
+          <article class="card fade-in" aria-label="Cursos na área de Medicina Veterinária">
+            <div class="card-icon" aria-hidden="true">🏥</div>
+            <h3>Especialização em Fisioterapia & Reabilitação Animal</h3>
+            <p style="color: var(--color-secondary); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem;">
+              Formação continuada <span class="tag tag-done">Concluído</span>
+            </p>
+            <p style="color: var(--color-muted); font-size: 0.95rem;">
+              Diversos cursos e treinamentos na área de fisioterapia veterinária, reabilitação
+              de pequenos animais, acupuntura veterinária e medicina baseada em evidências,
+              que embasam a atuação na Impulso Fisioterapia Veterinária.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Idiomas ─────────────────────────────────────────────── -->
+    <section class="section" style="padding-top: 0;" aria-labelledby="titulo-idiomas">
+      <div class="container">
+
+        <h2 class="section-title fade-in" id="titulo-idiomas">Idiomas</h2>
+        <p class="section-subtitle fade-in">Comunicação sem fronteiras</p>
+
+        <div class="language-cards">
+
+          <!-- Português -->
+          <article class="language-card fade-in" aria-label="Português Nativo">
+            <div class="language-flag" aria-hidden="true">🇧🇷</div>
+            <p class="language-name">Português</p>
+            <p class="language-level">Nativo</p>
+          </article>
+
+          <!-- Inglês -->
+          <article class="language-card fade-in" aria-label="Inglês Avançado com certificação Cambridge">
+            <div class="language-flag" aria-hidden="true">🇬🇧</div>
+            <p class="language-name">Inglês</p>
+            <p class="language-level">
+              Avançado<br>
+              <small style="color: var(--color-secondary); font-weight: 600;">
+                Certificação Cambridge
+              </small>
+            </p>
+          </article>
+
+          <!-- Espanhol -->
+          <article class="language-card fade-in" aria-label="Espanhol - Nível básico">
+            <div class="language-flag" aria-hidden="true">🇪🇸</div>
+            <p class="language-name">Espanhol</p>
+            <p class="language-level">Básico</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================================
+    RODAPÉ
+  ============================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="anoAtual"></span> Guilherme Vicente Justino · Curitiba, PR</p>
+      <nav class="footer-links" aria-label="Links de contato">
+        <a href="mailto:gvicentejustino@gmail.com"
+           aria-label="Enviar e-mail">✉ gvicentejustino@gmail.com</a>
+        <a href="https://github.com/guilherme-v-justino"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Perfil no GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/guilherme-vicente-justino-6b0780124"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Perfil no LinkedIn">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

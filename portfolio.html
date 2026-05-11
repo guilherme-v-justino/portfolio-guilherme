@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<!--
+  ================================================================
+  PORTFÓLIO PESSOAL - Guilherme Vicente Justino
+  Disciplina: Fundamentos da Programação Web - UNINTER
+  RU: 5469817
+  Arquivo: portfolio.html (Portfólio de trabalhos e projetos)
+  ================================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de projetos de Guilherme Vicente Justino — projetos em Ciência de Dados, programação e tecnologia." />
+  <title>Guilherme Vicente Justino | Portfólio</title>
+
+  <!-- Google Fonts: Raleway (títulos) + Nunito Sans (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==============================================================
+    NAVBAR — O link "Portfólio" recebe a classe "active"
+  ============================================================== -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+
+      <a href="index.html" class="nav-logo" aria-label="Página inicial">GVJ</a>
+
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="index.html"     class="nav-link">Sobre mim</a></li>
+        <li><a href="formacao.html"  class="nav-link">Formação</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Portfólio</a></li>
+        <li><a href="contato.html"   class="nav-link">Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="hamburger" id="hamburger"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ==============================================================
+    CONTEÚDO PRINCIPAL
+  ============================================================== -->
+  <main style="padding-top: 68px;">
+
+    <!-- ── Portfólio de Projetos ──────────────────────────────── -->
+    <section class="section" aria-labelledby="titulo-portfolio">
+      <div class="container">
+
+        <h2 class="section-title fade-in" id="titulo-portfolio">Portfólio</h2>
+        <p class="section-subtitle fade-in">Projetos e trabalhos desenvolvidos</p>
+
+        <!-- Texto de apresentação do portfólio -->
+        <p class="portfolio-intro fade-in">
+          Estou no início da minha jornada em desenvolvimento de software e ciência de dados,
+          construindo ativamente meu portfólio técnico. Abaixo estão os projetos que
+          desenvolvei até o momento, disponíveis no meu GitHub. À medida que avanço na
+          graduação em Ciência de Dados e nos cursos complementares, novos projetos serão
+          adicionados continuamente.
+        </p>
+
+        <!-- Grade de cards de projetos -->
+        <div class="portfolio-grid">
+
+          <!-- Card 1: Este portfólio -->
+          <article class="portfolio-card fade-in" aria-label="Projeto: Portfólio Pessoal">
+            <!-- Cabeçalho colorido com ícone representativo -->
+            <div class="portfolio-card-header" aria-hidden="true">🌐</div>
+            <div class="portfolio-card-body">
+              <h3>Portfólio Pessoal Online</h3>
+              <p>
+                Site de portfólio profissional desenvolvido como atividade prática
+                da disciplina de Fundamentos da Programação Web (UNINTER). Estrutura
+                multi-página com tema claro/escuro, menu responsivo e formulário
+                validado em JavaScript puro — sem frameworks ou bibliotecas externas.
+              </p>
+              <!-- Tags das tecnologias utilizadas -->
+              <div class="portfolio-tags" aria-label="Tecnologias utilizadas">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">GitHub Pages</span>
+              </div>
+              <!-- Link para o repositório do projeto -->
+              <a href="https://github.com/guilherme-v-justino"
+                 class="btn btn-primary"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Ver código-fonte do portfólio no GitHub">
+                Ver no GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Estudos de Python -->
+          <article class="portfolio-card fade-in" aria-label="Projeto: Estudos em Python">
+            <div class="portfolio-card-header" aria-hidden="true">🐍</div>
+            <div class="portfolio-card-body">
+              <h3>Estudos em Python</h3>
+              <p>
+                Repositório com exercícios e projetos desenvolvidos durante os estudos
+                de Python com o professor Gustavo Guanabara (Curso em Vídeo) e no
+                curso de Formação Plena em Análise e Ciência de Dados (Udemy).
+                Inclui desafios de lógica, estruturas de dados e scripts de automação.
+              </p>
+              <div class="portfolio-tags" aria-label="Tecnologias utilizadas">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Lógica de Programação</span>
+                <span class="tech-tag">Algoritmos</span>
+              </div>
+              <a href="https://github.com/guilherme-v-justino"
+                 class="btn btn-primary"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Ver repositório de Python no GitHub">
+                Ver no GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Em construção / Próximos projetos -->
+          <article class="portfolio-card fade-in" aria-label="Próximos projetos em desenvolvimento">
+            <div class="portfolio-card-header" aria-hidden="true">🚀</div>
+            <div class="portfolio-card-body">
+              <h3>Análise de Dados — Em breve</h3>
+              <p>
+                Projeto em desenvolvimento como parte da formação em Ciência de Dados.
+                O objetivo é aplicar técnicas de análise exploratória, visualização e
+                modelagem preditiva em um conjunto de dados real, utilizando Python,
+                Pandas e bibliotecas de visualização como Matplotlib e Seaborn.
+              </p>
+              <div class="portfolio-tags" aria-label="Tecnologias previstas">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Matplotlib</span>
+                <span class="tech-tag">Seaborn</span>
+              </div>
+              <!-- Botão desabilitado — projeto ainda não publicado -->
+              <button class="btn btn-outline"
+                      disabled
+                      aria-label="Projeto em desenvolvimento, ainda não disponível"
+                      style="cursor: not-allowed; opacity: 0.6;">
+                Em desenvolvimento…
+              </button>
+            </div>
+          </article>
+
+        </div><!-- /portfolio-grid -->
+
+        <!-- Link direto para o perfil GitHub -->
+        <div style="text-align: center; margin-top: 3rem;" class="fade-in">
+          <p style="color: var(--color-muted); margin-bottom: 1rem;">
+            Acompanhe minha evolução e confira todos os repositórios no GitHub
+          </p>
+          <a href="https://github.com/guilherme-v-justino"
+             class="btn btn-primary"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Ver perfil completo no GitHub">
+            🐙 Acessar perfil no GitHub
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================================
+    RODAPÉ
+  ============================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="anoAtual"></span> Guilherme Vicente Justino · Curitiba, PR</p>
+      <nav class="footer-links" aria-label="Links de contato">
+        <a href="mailto:gvicentejustino@gmail.com"
+           aria-label="Enviar e-mail">✉ gvicentejustino@gmail.com</a>
+        <a href="https://github.com/guilherme-v-justino"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Perfil no GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/guilherme-vicente-justino-6b0780124"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Perfil no LinkedIn">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

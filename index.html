@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<!--
+  ================================================================
+  PORTFÓLIO PESSOAL - Guilherme Vicente Justino
+  Disciplina: Fundamentos da Programação Web - UNINTER
+  RU: 5469817
+  Arquivo: index.html (Sobre mim - página inicial)
+  ================================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Guilherme Vicente Justino — Médico Veterinário, Cientista de Dados e Empreendedor em Curitiba, PR." />
+  <title>Guilherme Vicente Justino | Sobre mim</title>
+
+  <!-- Google Fonts: Raleway (títulos) + Nunito Sans (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Folha de estilos principal (CSS puro, sem frameworks) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==============================================================
+    CABEÇALHO / NAVBAR FIXA
+    Idêntica em todas as páginas. O link "Sobre mim" recebe
+    a classe "active" pois esta é a página atual.
+  ============================================================== -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+
+      <!-- Logo / monograma clicável -->
+      <a href="index.html" class="nav-logo" aria-label="Página inicial">GVJ</a>
+
+      <!-- Menu principal de navegação entre páginas -->
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="index.html"     class="nav-link active">Sobre mim</a></li>
+        <li><a href="formacao.html"  class="nav-link">Formação</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfólio</a></li>
+        <li><a href="contato.html"   class="nav-link">Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Botão hambúrguer: visível apenas em mobile (CSS) -->
+        <!-- O JavaScript controla a abertura/fechamento do menu -->
+        <button class="hamburger" id="hamburger"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Barra de progresso de leitura (atualizada pelo JavaScript) -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ==============================================================
+    SEÇÃO HERO — Apresentação principal com foto e tagline animada
+  ============================================================== -->
+  <section class="hero" aria-label="Apresentação pessoal">
+    <div class="container">
+      <div class="hero-content fade-in">
+
+        <!-- Foto de perfil profissional -->
+        <div class="hero-photo-wrapper">
+          <img
+            src="images/profile.jpg"
+            alt="Foto de perfil de Guilherme Vicente Justino"
+            class="hero-photo"
+            width="210"
+            height="210"
+          />
+        </div>
+
+        <!-- Texto de apresentação -->
+        <div class="hero-text">
+          <span class="hero-eyebrow">Portfólio Profissional</span>
+
+          <h1 class="hero-name">Guilherme Vicente Justino</h1>
+
+          <!-- Tagline estática -->
+          <p class="hero-tagline">Médico Veterinário · Cientista de Dados · Empreendedor</p>
+
+          <!-- Badges de apresentação rápida -->
+          <div class="hero-badges" aria-label="Áreas de atuação">
+            <span class="badge">🐾 Médico Veterinário</span>
+            <span class="badge">📊 Ciência de Dados</span>
+            <span class="badge">🚀 Empreendedor</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+    SEÇÃO SOBRE MIM — Apresentação detalhada em cards
+  ============================================================== -->
+  <main>
+    <section class="section" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="container">
+
+        <h2 class="section-title fade-in" id="titulo-sobre">Sobre mim</h2>
+        <p class="section-subtitle fade-in">Conheça um pouco mais da minha trajetória</p>
+
+        <!-- Grade de três cards informativos -->
+        <div class="about-grid">
+
+          <!-- Card 1: Quem sou -->
+          <article class="card fade-in" aria-label="Apresentação pessoal">
+            <div class="card-icon" aria-hidden="true">👤</div>
+            <h3>Quem sou</h3>
+            <p>
+              Natural de Florianópolis/SC e residente em Curitiba/PR, sou Médico Veterinário
+              formado pela Universidade Federal do Paraná (UFPR). Combinando rigor científico
+              com visão estratégica, expando minha trajetória para o universo da
+              <strong>Ciência de Dados</strong>, área em que vejo enorme potencial para
+              transformar como negócios e profissionais tomam decisões.
+            </p>
+          </article>
+
+          <!-- Card 2: O que faço -->
+          <article class="card fade-in" aria-label="Atividade profissional atual">
+            <div class="card-icon" aria-hidden="true">💼</div>
+            <h3>O que faço</h3>
+            <p>
+              Sou sócio-proprietário da <strong>Impulso Fisioterapia Veterinária</strong>,
+              clínica especializada em reabilitação e fisioterapia de pequenos animais,
+              localizada em Curitiba/PR. À frente do negócio, busco constantemente
+              otimizar processos e elevar a qualidade do atendimento, unindo excelência
+              clínica à gestão orientada por dados e resultados.
+            </p>
+          </article>
+
+          <!-- Card 3: Interesses e hobbies -->
+          <article class="card fade-in" aria-label="Interesses e hobbies">
+            <div class="card-icon" aria-hidden="true">🎯</div>
+            <h3>Interesses & Hobbies</h3>
+            <ul class="hobbies-list">
+              <li>🎾 <strong>Tênis</strong> — praticante amador apaixonado pelo esporte</li>
+              <li>💻 <strong>Tecnologia</strong> — programação, dados e inovação digital</li>
+              <li>🐾 <strong>Saúde Animal</strong> — reabilitação e bem-estar de pets</li>
+              <li>📈 <strong>Negócios</strong> — empreendedorismo e otimização de resultados</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==============================================================
+    RODAPÉ — Presente em todas as páginas
+  ============================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <!-- Ano atualizado automaticamente pelo JavaScript -->
+      <p>© <span id="anoAtual"></span> Guilherme Vicente Justino · Curitiba, PR</p>
+      <nav class="footer-links" aria-label="Links de contato">
+        <a href="mailto:gvicentejustino@gmail.com"
+           aria-label="Enviar e-mail">✉ gvicentejustino@gmail.com</a>
+        <a href="https://github.com/guilherme-v-justino"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Perfil no GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/guilherme-vicente-justino-6b0780124"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Perfil no LinkedIn">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Script principal (JavaScript puro, sem frameworks) -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
